@@ -1,0 +1,193 @@
+{
+  "rates": [
+    {
+      "Currency": "AUD1",
+      "Buying Rate": "29.97",
+      "Selling Rate": "31.34",
+      "Country": "AUSTRALIA",
+      "Date": "2024-12-13"
+    },
+    {
+      "Currency": "CAD1",
+      "Buying Rate": "32.83",
+      "Selling Rate": "34.27",
+      "Country": "CANADA",
+      "Date": "2024-12-13"
+    },
+    {
+      "Currency": "DKK",
+      "Buying Rate": "0.00",
+      "Selling Rate": "0.00",
+      "Country": "DENMARK",
+      "Date": "2024-12-13"
+    },
+    {
+      "Currency": "HKD1",
+      "Buying Rate": "5.95",
+      "Selling Rate": "6.27",
+      "Country": "HONG KONG",
+      "Date": "2024-12-13"
+    },
+    {
+      "Currency": "JPY 100",
+      "Buying Rate": "31.26",
+      "Selling Rate": "32.70",
+      "Country": "JAPAN",
+      "Date": "2024-12-13"
+    },
+    {
+      "Currency": "EUR1",
+      "Buying Rate": "48.81",
+      "Selling Rate": "50.20",
+      "Country": "EURO",
+      "Date": "2024-12-13"
+    },
+    {
+      "Currency": "INR1",
+      "Buying Rate": "0.54",
+      "Selling Rate": "0.57",
+      "Country": "INDIA ****",
+      "Date": "2024-12-13"
+    },
+    {
+      "Currency": "MGA 100",
+      "Buying Rate": "",
+      "Selling Rate": "1.08",
+      "Country": "MALAGASY ****",
+      "Date": "2024-12-13"
+    },
+    {
+      "Currency": "NZD1",
+      "Buying Rate": "26.68",
+      "Selling Rate": "28.07",
+      "Country": "NEW ZEALAND",
+      "Date": "2024-12-13"
+    },
+    {
+      "Currency": "NOK1",
+      "Buying Rate": "4.10",
+      "Selling Rate": "4.51",
+      "Country": "NORWAY",
+      "Date": "2024-12-13"
+    },
+    {
+      "Currency": "SAR1",
+      "Buying Rate": "12.35",
+      "Selling Rate": "13.27",
+      "Country": "SAUDI ARABIA",
+      "Date": "2024-12-13"
+    },
+    {
+      "Currency": "SGD1",
+      "Buying Rate": "34.37",
+      "Selling Rate": "35.95",
+      "Country": "SINGAPORE",
+      "Date": "2024-12-13"
+    },
+    {
+      "Currency": "ZAR1",
+      "Buying Rate": "2.60",
+      "Selling Rate": "2.79",
+      "Country": "SOUTH AFRICA",
+      "Date": "2024-12-13"
+    },
+    {
+      "Currency": "SEK1",
+      "Buying Rate": "4.16",
+      "Selling Rate": "4.58",
+      "Country": "SWEDEN",
+      "Date": "2024-12-13"
+    },
+    {
+      "Currency": "CHF1",
+      "Buying Rate": "51.78",
+      "Selling Rate": "54.00",
+      "Country": "SWITZERLAND",
+      "Date": "2024-12-13"
+    },
+    {
+      "Currency": "AED1",
+      "Buying Rate": "12.68",
+      "Selling Rate": "13.29",
+      "Country": "U A EMIRATES",
+      "Date": "2024-12-13"
+    },
+    {
+      "Currency": "USD1",
+      "Buying Rate": "46.73",
+      "Selling Rate": "47.63",
+      "Country": "USA  ##",
+      "Date": "2024-12-13"
+    },
+    {
+      "Currency": "GBP1",
+      "Buying Rate": "59.22",
+      "Selling Rate": "60.97",
+      "Country": "UK",
+      "Date": "2024-12-13"
+    },
+    {
+      "Currency": "PKR 100",
+      "Buying Rate": "0.00",
+      "Selling Rate": "0.00",
+      "Country": "PAKISTAN ****",
+      "Date": "2024-12-13"
+    },
+    {
+      "Currency": "BHD1",
+      "Buying Rate": "0.00",
+      "Selling Rate": "0.00",
+      "Country": "BAHRAIN",
+      "Date": "2024-12-13"
+    },
+    {
+      "Currency": "CNY",
+      "Buying Rate": "6.22",
+      "Selling Rate": "7.13",
+      "Country": "CHINA ++",
+      "Date": "2024-12-13"
+    },
+    {
+      "Currency": "XOF 100",
+      "Buying Rate": "",
+      "Selling Rate": "",
+      "Country": "IVORY COAST  ****",
+      "Date": "2024-12-13"
+    },
+    {
+      "Currency": "KES 100",
+      "Buying Rate": "36.50",
+      "Selling Rate": "37.52",
+      "Country": "KENYA ****",
+      "Date": "2024-12-13"
+    },
+    {
+      "Currency": "KWD1",
+      "Buying Rate": "0.00",
+      "Selling Rate": "0.00",
+      "Country": "KUWAIT",
+      "Date": "2024-12-13"
+    },
+    {
+      "Currency": "RWF 100",
+      "Buying Rate": "",
+      "Selling Rate": "",
+      "Country": "RWANDA  ****",
+      "Date": "2024-12-13"
+    },
+    {
+      "Currency": "TZS 100",
+      "Buying Rate": "",
+      "Selling Rate": "",
+      "Country": "TANZANIA  ****",
+      "Date": "2024-12-13"
+    },
+    {
+      "Currency": "UGX 100",
+      "Buying Rate": "1.26",
+      "Selling Rate": "1.32",
+      "Country": "UGANDA  ****",
+      "Date": "2024-12-13"
+    }
+  ]
+}
