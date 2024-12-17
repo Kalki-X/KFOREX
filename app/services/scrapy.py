@@ -4,7 +4,11 @@ from bs4 import BeautifulSoup
 
 
 def test_scrap_web():
-    print("Screappppingggg....")
+    return 'Scraping SBM Test Env'
+
+
+def test_download_rate_sheet():
+    return "MCB Rate sheet"
 
 
 def scrape_web():
