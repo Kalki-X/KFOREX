@@ -17,7 +17,7 @@ def test():
 
 @router.get("/test&bank=mcb")
 def test_mcb():
-    result = get_ratesheets()
+    result = test_download_rate_sheet()
     return result
 
 @router.get("/kfx/?a=rates&bank=sbm")
