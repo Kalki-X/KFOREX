@@ -1,10 +1,34 @@
 import requests
 from bs4 import BeautifulSoup
+from cryptography.fernet import Fernet
 
 
 
 def test_scrap_web():
-    print("Screappppingggg....")
+    return 'Scraping SBM Test Env'
+
+
+def test_download_rate_sheet():
+
+    #text = "https://mcb.mu/webapi/mcb/ForexDataExcel"
+
+    #key = Fernet.generate_key()
+
+    key = b'ZT6M9dgT7T1thqYozH3TyeC8P-meSdu2tz2n6_aA-G8='
+
+    encrypted =  b'gAAAAABnYsz69XTWBLVV7Y_nZjbAr7yByuoOM68gBfxoWxCsZ-n8kh3n2JY2lM96KaixwQmOff4lOelYYJqyn090FsdoUJTmVN9AfD-06tHcSXgy7Y2omPJVLjAPStO4WnbwctivwTFX'
+
+    print("Key :", key)
+
+    fernet = Fernet(key)
+
+    # encMessage = fernet.encrypt(message.encode())
+
+    decMessage = fernet.decrypt(encrypted).decode()
+
+    print("Decrypted :", decMessage)
+
+    return "MCB Rate sheet"
 
 
 def scrape_web():
