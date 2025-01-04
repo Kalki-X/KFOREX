@@ -1,10 +1,16 @@
 import requests
 from bs4 import BeautifulSoup
 from cryptography.fernet import Fernet
+import os
 
 
 
 def test_scrap_web():
+
+
+    h = os.environ.get('ENV_ID')
+    print (h)
+
     return 'Scraping SBM Test Env'
 
 
@@ -55,27 +61,28 @@ def scrape_web():
         # Parse the table rows
         exchange_rates = []
         for row in rows:
-            cells = row.find_all("td")  # Assuming data is within <td> tags
-            if cells:  # Skip headers or empty rows
-                currency = cells[2].get_text(strip=True)
-                buying_rate = cells[3].get_text(strip=True)
-                selling_rate = cells[6].get_text(strip=True)
-                country = cells[1].get_text(strip=True)
-                date_forex = cells[0].get_text(strip=True)
-                exchange_rates.append(
-                    {
-                        "Currency": currency,
-                        "Buying Rate": buying_rate,
-                        "Selling Rate": selling_rate,
-                        "Country": country,
-                        "Date": date_forex
-                    }
-                )
+            if isinstance(row, BeautifulSoup):  # Ensure row is a BeautifulSoup object
+                cells = row.find_all("td")  # Assuming data is within <td> tags
+                if cells:  # Skip headers or empty rows
+                    currency = cells[2].get_text(strip=True)
+                    buying_rate = cells[3].get_text(strip=True)
+                    selling_rate = cells[6].get_text(strip=True)
+                    country = cells[1].get_text(strip=True)
+                    date_forex = cells[0].get_text(strip=True)
+                    exchange_rates.append(
+                        {
+                            "Currency": currency,
+                            "Buying Rate": buying_rate,
+                            "Selling Rate": selling_rate,
+                            "Country": country,
+                            "Date": date_forex
+                        }
+                    )
 
         # Print the results
         for rate in exchange_rates:
             print(rate)
             results.append(rate)
     else:
-            results = ["Failed to fetch the page. Status code: {response.status_code}"]
+        results = [f"Failed to fetch the page. Status code: {response.status_code}"]
     return results
