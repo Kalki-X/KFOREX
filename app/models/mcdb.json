@@ -1,0 +1,242 @@
+[
+    {
+        "Index": 0,
+        "Country": "COUNTRY",
+        "Code": "CODE",
+        "Buying TT": "TT",
+        "Buying TC/DD": "TC/DD",
+        "Selling TT": "TT",
+        "Selling TC/DD": "TC/DD",
+        "Rate_Date": "RATE DATE"
+    },
+    {
+        "Index": 2,
+        "Country": "AUSTRALIA",
+        "Code": "AUD",
+        "Buying TT": 29.36,
+        "Buying TC/DD": 0,
+        "Selling TT": 30.8,
+        "Selling TC/DD": 0,
+        "Rate_Date": "07-Feb-2025 08:56"
+    },
+    {
+        "Index": 3,
+        "Country": "CANADA",
+        "Code": "CAD",
+        "Buying TT": 32.75,
+        "Buying TC/DD": 32.65,
+        "Selling TT": 34.35,
+        "Selling TC/DD": 34.35,
+        "Rate_Date": "07-Feb-2025 08:56"
+    },
+    {
+        "Index": 4,
+        "Country": "CHINA",
+        "Code": "CNY",
+        "Buying TT": 6.36,
+        "Buying TC/DD": 0,
+        "Selling TT": 6.69,
+        "Selling TC/DD": 0,
+        "Rate_Date": "07-Feb-2025 08:56"
+    },
+    {
+        "Index": 5,
+        "Country": "EUR COUNTRIES",
+        "Code": "EUR",
+        "Buying TT": 47.83,
+        "Buying TC/DD": 47.71,
+        "Selling TT": 49.26,
+        "Selling TC/DD": 49.26,
+        "Rate_Date": "07-Feb-2025 08:56"
+    },
+    {
+        "Index": 6,
+        "Country": "GREAT BRITAIN",
+        "Code": "GBP",
+        "Buying TT": 57.24,
+        "Buying TC/DD": 57.1,
+        "Selling TT": 58.95,
+        "Selling TC/DD": 58.95,
+        "Rate_Date": "07-Feb-2025 08:56"
+    },
+    {
+        "Index": 7,
+        "Country": "HONG KONG",
+        "Code": "HKD",
+        "Buying TT": 5.89,
+        "Buying TC/DD": 0,
+        "Selling TT": 6.23,
+        "Selling TC/DD": 0,
+        "Rate_Date": "07-Feb-2025 08:56"
+    },
+    {
+        "Index": 8,
+        "Country": "INDIA",
+        "Code": "INR",
+        "Buying TT": 0.5347,
+        "Buying TC/DD": 0,
+        "Selling TT": 0.5689,
+        "Selling TC/DD": 0.5689,
+        "Rate_Date": "07-Feb-2025 08:56"
+    },
+    {
+        "Index": 9,
+        "Country": "JAPAN",
+        "Code": "JPY",
+        "Buying TT": 30.81,
+        "Buying TC/DD": 0,
+        "Selling TT": 32.44,
+        "Selling TC/DD": 0,
+        "Rate_Date": "07-Feb-2025 08:56"
+    },
+    {
+        "Index": 10,
+        "Country": "KENYA",
+        "Code": "KES",
+        "Buying TT": 36.57,
+        "Buying TC/DD": 0,
+        "Selling TT": 38.11,
+        "Selling TC/DD": 0,
+        "Rate_Date": "07-Feb-2025 08:56"
+    },
+    {
+        "Index": 11,
+        "Country": "MADAGASCAR",
+        "Code": "MGA",
+        "Buying TT": 1.01,
+        "Buying TC/DD": 0,
+        "Selling TT": 1.07,
+        "Selling TC/DD": 0,
+        "Rate_Date": "07-Feb-2025 08:56"
+    },
+    {
+        "Index": 12,
+        "Country": "NEW ZEALAND",
+        "Code": "NZD",
+        "Buying TT": 26.16,
+        "Buying TC/DD": 0,
+        "Selling TT": 27.39,
+        "Selling TC/DD": 0,
+        "Rate_Date": "07-Feb-2025 08:56"
+    },
+    {
+        "Index": 13,
+        "Country": "NORWAY",
+        "Code": "NOK",
+        "Buying TT": 4.05,
+        "Buying TC/DD": 0,
+        "Selling TT": 4.28,
+        "Selling TC/DD": 0,
+        "Rate_Date": "07-Feb-2025 08:56"
+    },
+    {
+        "Index": 14,
+        "Country": "PAKISTAN",
+        "Code": "PKR",
+        "Buying TT": 16.5,
+        "Buying TC/DD": 0,
+        "Selling TT": 17.47,
+        "Selling TC/DD": 0,
+        "Rate_Date": "07-Feb-2025 08:56"
+    },
+    {
+        "Index": 15,
+        "Country": "SAUDI ARABIA",
+        "Code": "SAR",
+        "Buying TT": 12.28,
+        "Buying TC/DD": 0,
+        "Selling TT": 12.99,
+        "Selling TC/DD": 0,
+        "Rate_Date": "07-Feb-2025 08:56"
+    },
+    {
+        "Index": 16,
+        "Country": "SEYCHELLES",
+        "Code": "SCR",
+        "Buying TT": 3.17,
+        "Buying TC/DD": 0,
+        "Selling TT": 3.47,
+        "Selling TC/DD": 0,
+        "Rate_Date": "07-Feb-2025 08:56"
+    },
+    {
+        "Index": 17,
+        "Country": "SINGAPORE",
+        "Code": "SGD",
+        "Buying TT": 33.84,
+        "Buying TC/DD": 0,
+        "Selling TT": 35.63,
+        "Selling TC/DD": 0,
+        "Rate_Date": "07-Feb-2025 08:56"
+    },
+    {
+        "Index": 18,
+        "Country": "SOUTH AFRICA",
+        "Code": "ZAR",
+        "Buying TT": 2.52,
+        "Buying TC/DD": 0,
+        "Selling TT": 2.68,
+        "Selling TC/DD": 0,
+        "Rate_Date": "07-Feb-2025 08:56"
+    },
+    {
+        "Index": 19,
+        "Country": "SRI LANKA",
+        "Code": "LKR",
+        "Buying TT": 15.84,
+        "Buying TC/DD": 0,
+        "Selling TT": 16.58,
+        "Selling TC/DD": 0,
+        "Rate_Date": "07-Feb-2025 08:56"
+    },
+    {
+        "Index": 20,
+        "Country": "SWEDEN",
+        "Code": "SEK",
+        "Buying TT": 4.18,
+        "Buying TC/DD": 0,
+        "Selling TT": 4.38,
+        "Selling TC/DD": 0,
+        "Rate_Date": "07-Feb-2025 08:56"
+    },
+    {
+        "Index": 21,
+        "Country": "SWITZERLAND",
+        "Code": "CHF",
+        "Buying TT": 51.09,
+        "Buying TC/DD": 0,
+        "Selling TT": 53.8,
+        "Selling TC/DD": 0,
+        "Rate_Date": "07-Feb-2025 08:56"
+    },
+    {
+        "Index": 22,
+        "Country": "TANZANIA",
+        "Code": "TZS",
+        "Buying TT": 1.81,
+        "Buying TC/DD": 0,
+        "Selling TT": 1.9,
+        "Selling TC/DD": 0,
+        "Rate_Date": "07-Feb-2025 08:56"
+    },
+    {
+        "Index": 23,
+        "Country": "UNITED ARAB EMIRATES",
+        "Code": "AED",
+        "Buying TT": 12.86,
+        "Buying TC/DD": 0,
+        "Selling TT": 13.46,
+        "Selling TC/DD": 0,
+        "Rate_Date": "07-Feb-2025 08:56"
+    },
+    {
+        "Index": 24,
+        "Country": "USA",
+        "Code": "USD",
+        "Buying TT": 46.29,
+        "Buying TC/DD": 0,
+        "Selling TT": 47.19,
+        "Selling TC/DD": 47.19,
+        "Rate_Date": "07-Feb-2025 08:56"
+    }
+]

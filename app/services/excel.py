@@ -1,15 +1,29 @@
 import os
-import datetime
+from datetime import datetime, timedelta
 import requests
 from cryptography.fernet import Fernet
+import pandas as pd
+import json
+import threading
 
 
-get_date = datetime.datetime.now()
-get_current_date = get_date.strftime("%Y-%m-%d")
+# Define the path to the JSON file
+json_file_path = 'app/models/mcdb.json'
+
+def exclude_weekend():
+    current_date = datetime.now()
+    if current_date.weekday() == 5:
+        current_date = current_date - timedelta(days=1)
+    elif current_date.weekday() == 6:
+        current_date = current_date - timedelta(days=2)
+    else:
+        current_date = current_date
+    return current_date.strftime("%Y-%m-%d")
 
 def get_ratesheets():
 
     results = []
+
     # Retrieve the key from environment variables
     key_hash_id = os.getenv('KEY_HASH_ID')
     key_hash_uri = os.getenv('KEY_HASH_URI')
@@ -31,8 +45,8 @@ def get_ratesheets():
         payload = {
             "BaseCurrency": "MUR",  # Example currency
             "CurrencyCode": "ALL",
-            "EndDate": get_current_date,
-            "StartDate": get_current_date
+            "EndDate": exclude_weekend(),
+            "StartDate": exclude_weekend()
         }
 
         # Headers (optional, depending on what the server expects)
@@ -53,7 +67,8 @@ def get_ratesheets():
                 # Save the file
                 with open(save_path, "wb") as file:
                     file.write(response.content)
-                results.append(f"File downloaded successfully and saved as '{save_path}'.")
+                    print(f"File downloaded successfully and saved as '{save_path}'.")
+                excel_line()
             else:
                 results.append(f"Failed to download the file. Status code: {response.status_code}")
         except Exception as e:
@@ -62,3 +77,66 @@ def get_ratesheets():
         results.append("KFX: Fatal Err in hashing val.")
 
     return results
+
+def excel_line():
+
+    # Load the Excel file
+    file_path = './docs/exchange_rates.xlsx'  # Make sure the file is in the same directory as this script
+    df = pd.read_excel(file_path, sheet_name='Indicative Rates', skiprows=6)
+
+    # Rename the columns for clarity
+    df.columns = [
+        'Country', 'Currency', 'Code', 'Units', 'Buying_TT', 'Buying_TC_DD',
+        'Buying_Notes', 'Selling_TT', 'Selling_TC_DD', 'Selling_Notes', 'Rate_Date'
+    ]
+
+    # Filter out rows without country or code information
+    df_rates = df[df['Country'].notna() & df['Code'].notna()]
+
+    # Select relevant columns
+    df_output = df_rates[['Country', 'Code', 'Buying_TT', 'Buying_TC_DD', 'Selling_TT', 'Selling_TC_DD', 'Rate_Date']]
+
+    # Create an empty list to store the results
+    result_list = []
+
+    # Iterate over each row and match corresponding values
+    for index, row in df_output.iterrows():
+        result = {
+            'Index': int(index),  # Ensure the index is an integer
+            'Country': str(row['Country']),  # Convert to string to avoid type issues
+            'Code': str(row['Code']),
+            'Buying TT': row['Buying_TT'] if pd.notnull(row['Buying_TT']) else 'N/A',
+            'Buying TC/DD': row['Buying_TC_DD'] if pd.notnull(row['Buying_TC_DD']) else 'N/A',
+            'Selling TT': row['Selling_TT'] if pd.notnull(row['Selling_TT']) else 'N/A',
+            'Selling TC/DD': row['Selling_TC_DD'] if pd.notnull(row['Selling_TC_DD']) else 'N/A',
+            'Rate_Date': row['Rate_Date'] if pd.notnull(row['Rate_Date']) else 'N/A'
+
+        }
+        result_list.append(result)
+
+    print(os.path.getsize(json_file_path))
+
+    # Convert the list of dictionaries to a JSON file
+    with open(json_file_path, 'w') as json_file:
+        json.dump(result_list, json_file, indent=4)
+
+    return (f"Data has been successfully stored in {json_file_path}")
+
+def get_jsonrates():
+    with open(json_file_path, 'r') as json_file:
+        try:
+            data = json.load(json_file)
+            return data
+        except json.JSONDecodeError:
+            print("The JSON file is not valid.")
+            return None
+
+
+def main_mrates():
+    # Check if the file exists and is not empty
+    if os.path.exists(json_file_path) and os.path.getsize(json_file_path) > 0:
+        print("Rates from JSON")
+        return get_jsonrates()
+    else:
+      return get_ratesheets()
+      print("Rates from API REQUEST")

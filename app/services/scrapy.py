@@ -63,8 +63,11 @@ def scrape_web():
         for row in rows:
             if isinstance(row, BeautifulSoup):  # Ensure row is a BeautifulSoup object
                 cells = row.find_all("td")  # Assuming data is within <td> tags
+                print("currency", cells)
+
                 if cells:  # Skip headers or empty rows
                     currency = cells[2].get_text(strip=True)
+                    print("currency", currency)
                     buying_rate = cells[3].get_text(strip=True)
                     selling_rate = cells[6].get_text(strip=True)
                     country = cells[1].get_text(strip=True)
@@ -78,7 +81,6 @@ def scrape_web():
                             "Date": date_forex
                         }
                     )
-
         # Print the results
         for rate in exchange_rates:
             print(rate)
